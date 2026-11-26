@@ -1,0 +1,11 @@
+# Copy to .env. Set JWT_SECRET to a randomly generated value.
+PORT=3000
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=karaokesing
+JWT_SECRET=
+# Optional local HTTPS. Set both paths or leave both empty for loopback HTTP.
+TLS_KEY_PATH=
+TLS_CERT_PATH=
