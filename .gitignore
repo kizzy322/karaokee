@@ -10,3 +10,6 @@ logs/
 *.pfx
 .local-mysql/
 /local-mysql-data/
+
+/.postman/
+/postman/globals/
