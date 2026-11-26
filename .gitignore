@@ -9,3 +9,4 @@ logs/
 *.key
 *.pfx
 .local-mysql/
+/local-mysql-data/

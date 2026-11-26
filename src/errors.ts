@@ -26,7 +26,9 @@ export class ApiErrorFilter implements ExceptionFilter {
           statusCode = 409;
           details = ['A record with that unique value already exists'];
           break;
+        case 'ER_ROW_IS_REFERENCED':
         case 'ER_ROW_IS_REFERENCED_2':
+        case 'ER_NO_REFERENCED_ROW':
         case 'ER_NO_REFERENCED_ROW_2':
           statusCode = 409;
           details = ['The operation conflicts with a related record'];

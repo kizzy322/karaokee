@@ -24,10 +24,10 @@ The default API base URL is `http://127.0.0.1:3000/api/v1`. The SQL export conta
 
 ### Isolated workspace database
 
-This Windows workspace has a separate MySQL 8.0 data directory at `.local-mysql` on port 3309. Its schema is already imported. Keep the supplied local `.env` on this computer. If the database is stopped, run the following command in a separate terminal before starting the API. The normal XAMPP databases use their existing data directory and ports.
+This Windows workspace has a separate MySQL 8.0 data directory at `local-mysql-data` on port 3309. Its schema is already imported. Keep the supplied local `.env` on this computer. If the database is stopped, run the following command in a separate terminal before starting the API. The normal XAMPP databases use their existing data directory and ports.
 
 ```powershell
-& "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysqld.exe" --no-defaults --datadir=C:/xampp/htdocs/karaoke/.local-mysql --port=3309 --bind-address=127.0.0.1 --mysqlx=OFF --console
+& "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysqld.exe" --no-defaults --datadir=C:\xampp\htdocs\karaoke\local-mysql-data --port=3309 --bind-address=127.0.0.1 --mysqlx=OFF --innodb-undo-directory=C:\xampp\htdocs\karaoke\local-mysql-data --innodb-directories=C:\xampp\htdocs\karaoke\local-mysql-data --console
 ```
 
 On a fresh checkout, use the standard MySQL import above. The project’s database data directory and local credentials are excluded from Git.
